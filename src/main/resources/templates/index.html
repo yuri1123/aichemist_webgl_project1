@@ -99,10 +99,11 @@
                       <div class="row">
                         <div class="col-lg-12">
                           <!-- 웹지엘 컨텐츠 넣을 것임 -->
-                          <div th:id="myCanvas" style="width: 68vw; height: 92vh;">
+<!--                          <div th:id="myCanvas" style="width: 68vw; height: 92vh;">-->
 <!--                            <canvas id="myCanvas"><link href="https://alsdnr8647.cafe24.com/webgl/"></canvas>-->
-                            <div id="unity-container" class="unity-desktop">
-                              <canvas id="unity-canvas" width=600 height=450></canvas>
+                            <div id="unity-container" class="unity-desktop"
+                                 style="width: 120%; height: 100%;">>
+                              <canvas id="unity-canvas" style="width: 81%; height: 95%;"></canvas>
                               <div id="unity-loading-bar">
                                 <div id="unity-logo"></div>
                                 <div id="unity-progress-bar-empty">
@@ -166,7 +167,7 @@
                               // Set this to false if you want to decouple this synchronization from
                               // happening inside the engine, and you would instead like to size up
                               // the canvas DOM size and WebGL render target sizes yourself.
-                              // config.matchWebGLToCanvasSize = false;
+                              config.matchWebGLToCanvasSize = true;
 
                               if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
                                 // Mobile device style: fill the whole browser client area with the game canvas:
@@ -186,8 +187,8 @@
                               } else {
                                 // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-                                canvas.style.width = "65vw";
-                                canvas.style.height = "90vh";
+                                // canvas.style.width = "1600px";
+                                // canvas.style.height = "800px";
                               }
 
                               loadingBar.style.display = "block";
@@ -211,10 +212,6 @@
                           </div>
 <!--                          <img src="assets/aichemist/haru.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">-->
 <!--                        <div class="col-lg-12">-->
-<!--                          <div class="main-border-button">-->
-<!--                            <a href="#">Download Fortnite Now!</a>-->
-<!--                          </div>-->
-<!--                        </div>-->
                       </div>
                     </div>
                   </div>
@@ -329,14 +326,13 @@
       <div class="row">
         <div class="col-lg-12">
           <p>Copyright © <a href="#">AIChemist</a> Company. All rights reserved.
-          <img width="100vw" height="45px;" src="assets/aichemist/schools.png" alt="">
-<!--          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a>  Distributed By <a href="https://themewagon.com" target="_blank" >ThemeWagon</a></p>-->
-<!--        </div>-->
+
       </div>
     </div>
     </div>
+
   </footer>
-      </div>
+
       </div>
 </div>
 
