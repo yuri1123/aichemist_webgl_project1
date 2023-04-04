@@ -332,17 +332,20 @@
 
                             <div class="leave-comment">
                               <h4 class="mb-2">Leave A Comment</h4>
-                              <form class="comment-form">
+                              <form role="form" method="post" th:object="${replyFormDto}" class="comment-form">
                                 <div class="row d-flex">
 
                                   <div class="item">
                                     <div class="icon">
 <!--                                      <img src="assets/images/service-01.jpg" alt="" style="max-width: 60px; border-radius: 50%;">-->
                                     </div>
-                                    <input class="input_createdBy" type="text" name="createdBy" placeholder="Name"><br>
-                                    <textarea class="input_content" name="content" placeholder="Messages"></textarea>
+                                    <input class="input_createdBy" type="text" th:field = "*{createdBy}" placeholder="Name"><br>
+<!--                                    <input type="hidden" th:field = "*{regTime}">-->
+                                    <textarea class="input_content" th:field = "*{content}" placeholder="Messages"></textarea>
                                     <div class="text-end">
-                                    <button type="submit" class="sendbutton">Send message</button>
+                                        <input class="sendbutton" type="submit" th:formaction="|@{/create/reply}|" value="send Message">
+
+<!--                                    <button type="submit" class="sendbutton">Send message</button>-->
                                     </div>
                                   </div>
                                   </div>
