@@ -1,16 +1,12 @@
-package kr.aichemist.aichemist_webgl_project.Controller;
+package kr.aichemist.aichemist_webgl_project.controller;
 
 import jakarta.validation.Valid;
-import kr.aichemist.aichemist_webgl_project.Domain.Reply;
-import kr.aichemist.aichemist_webgl_project.Domain.ReplyFormDto;
-import kr.aichemist.aichemist_webgl_project.repository.ReplyRepository;
+import kr.aichemist.aichemist_webgl_project.domain.ReplyFormDto;
 import kr.aichemist.aichemist_webgl_project.service.ReplyService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller

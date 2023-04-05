@@ -1,9 +1,9 @@
 <!doctype html>
-<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
   <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>아이케미스트 WebGL 프로젝트(임시 타이틀)</title>
@@ -16,9 +16,19 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
 
+      . {
+        /*font-family: 'IBM Plex Sans KR', sans-serif;*/
+        font-family: 'Gowun Dodum', sans-serif;
+      }
       .input_createdBy{
         width: 100%;
         height: 50px;
@@ -48,8 +58,6 @@
       }
 
     </style>
-
-
   </head>
 
 <body>
@@ -132,9 +140,7 @@
                     <div class="content">
                       <div class="row">
                         <div class="col-lg-12">
-                          <!-- 웹지엘 컨텐츠 넣을 것임 -->
-<!--                          <div th:id="myCanvas" style="width: 68vw; height: 92vh;">-->
-<!--                            <canvas id="myCanvas"><link href="https://alsdnr8647.cafe24.com/webgl/"></canvas>-->
+                          <!-- WebGL contents-->
                             <div id="unity-container" class="unity-desktop"
                                  style="width: 120%; height: 100%;">>
                               <canvas id="unity-canvas" style="width: 81%; height: 95%;"></canvas>
@@ -158,13 +164,6 @@
                               var progressBarFull = document.querySelector("#unity-progress-bar-full");
                               var fullscreenButton = document.querySelector("#unity-fullscreen-button");
                               var warningBanner = document.querySelector("#unity-warning");
-
-                              // Shows a temporary message banner/ribbon for a few seconds, or
-                              // a permanent error message on top of the canvas if type=='error'.
-                              // If type=='warning', a yellow highlight color is used.
-                              // Modify or remove this function to customize the visually presented
-                              // way that non-critical warnings and error messages are presented to the
-                              // user.
                               function unityShowBanner(msg, type) {
                                 function updateBannerVisibility() {
                                   warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -195,12 +194,6 @@
                                 productVersion: "0.1",
                                 showBanner: unityShowBanner,
                               };
-
-                              // By default Unity keeps WebGL canvas render target size matched with
-                              // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-                              // Set this to false if you want to decouple this synchronization from
-                              // happening inside the engine, and you would instead like to size up
-                              // the canvas DOM size and WebGL render target sizes yourself.
                               config.matchWebGLToCanvasSize = true;
 
                               if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -213,13 +206,8 @@
                                 container.className = "unity-mobile";
                                 canvas.className = "unity-mobile";
 
-                                // To lower canvas resolution on mobile devices to gain some
-                                // performance, uncomment the following line:
-                                // config.devicePixelRatio = 1;
-
                                 unityShowBanner('WebGL builds are not supported on mobile devices.');
                               } else {
-                                // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
                                 // canvas.style.width = "1600px";
                                 // canvas.style.height = "800px";
@@ -244,8 +232,6 @@
                               document.body.appendChild(script);
                             </script>
                           </div>
-<!--                          <img src="assets/aichemist/haru.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">-->
-<!--                        <div class="col-lg-12">-->
                       </div>
                     </div>
                   </div>
@@ -310,50 +296,39 @@
                           <div class="heading-section">
                             <h4><em>Comments</em></h4>
                           </div>
-                          <div class="row">
-                            <div class="item">
-<!--                              <div class="icon">-->
-<!--                                &lt;!&ndash;                                <img src="assets/images/service-01.jpg" alt="" style="max-width: 60px; border-radius: 50%;">&ndash;&gt;-->
-<!--                              </div>-->
-                              <h4>정하루</h4>
-                              <p style="font-weight: bold">2023-04-04</p>
-                              <p>내가 제일 귀여오!</p>
-                            </div>
+<!--                          <div class="row">-->
+                          <div class="leave-comment">
+<!--                            <h4 class="mb-2">Leave A Comment</h4>-->
+                            <form role="form" method="post" th:object="${replyFormDto}">
+                              <!--                                class="comment-form"-->
+                              <div class="row d-flex">
 
-                            <div class="item">
-<!--                              <div class="icon">-->
-<!--                                <img src="assets/images/service-01.jpg" alt="" style="max-width: 60px; border-radius: 50%;">-->
-<!--                              </div>-->
-                              <h4>최유리</h4>
-                              <p style="font-weight: bold">2023-04-03</p>
-                              <p>너무 잼나요 재미재미재미교포!!!!!!!!!!!!!!!</p>
-                            </div>
-
-
-                            <div class="leave-comment">
-                              <h4 class="mb-2">Leave A Comment</h4>
-                              <form role="form" method="post" th:object="${replyFormDto}" class="comment-form">
-                                <div class="row d-flex">
-
-                                  <div class="item">
-                                    <div class="icon">
-<!--                                      <img src="assets/images/service-01.jpg" alt="" style="max-width: 60px; border-radius: 50%;">-->
-                                    </div>
-                                    <input class="input_createdBy" type="text" th:field = "*{createdBy}" placeholder="Name"><br>
-<!--                                    <input type="hidden" th:field = "*{regTime}">-->
-                                    <textarea class="input_content" th:field = "*{content}" placeholder="Messages"></textarea>
-                                    <div class="text-end">
-                                        <input class="sendbutton" type="submit" th:formaction="|@{/create/reply}|" value="send Message">
-
-<!--                                    <button type="submit" class="sendbutton">Send message</button>-->
-                                    </div>
+                                <div class="item">
+                                  <div class="icon">
+                                    <!--                                      <img src="assets/images/service-01.jpg" alt="" style="max-width: 60px; border-radius: 50%;">-->
                                   </div>
+                                  <input class="input_createdBy" type="text/plain" th:field = "*{createdBy}" placeholder="Name"><br>
+                                  <!--                                    <input type="hidden" th:field = "*{regTime}" value="${#dates.format(now, 'yyyy-MM-dd HH:mm:ss')}">-->
+
+                                  <textarea type="text/plain" class="input_content" th:field = "*{content}" placeholder="Messages"></textarea>
+                                  <div class="text-end">
+                                    <input class="sendbutton" type="submit" th:formaction="|@{/create/reply}|" value="send Message">
+
+                                    <!--                                    <button type="submit" class="sendbutton">Send message</button>-->
                                   </div>
-                                    </form>
                                 </div>
-                              </form>
-                            </div>
+                              </div>
+                            </form>
                           </div>
+                        </div>
+                      </div>
+                            <th:block th:each="reply:${replyList}">
+                            <div class="item p-1">
+                              <h4>[[${reply.createdBy}]]</h4>
+                              <p style="font-weight: bold">[[${reply.regTime}]]</p>
+                              <p>[[${reply.content}]]</p>
+                            </div>
+                            </th:block>
                         </div>
                       </div>
                     </div>

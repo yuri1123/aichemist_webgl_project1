@@ -1,4 +1,4 @@
-package kr.aichemist.aichemist_webgl_project.Domain;
+package kr.aichemist.aichemist_webgl_project.domain;
 
 import jakarta.persistence.Lob;
 import lombok.Getter;
@@ -17,6 +17,8 @@ public class ReplyFormDto {
     private String content;
     private String createdBy;
     private LocalDateTime regTime;
+
+    private LocalDateTime modifiedTime;
 
     private static ModelMapper modelMapper = new ModelMapper();
     public static ReplyFormDto of(Reply reply){

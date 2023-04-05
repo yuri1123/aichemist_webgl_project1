@@ -1,9 +1,12 @@
-package kr.aichemist.aichemist_webgl_project.Domain;
+package kr.aichemist.aichemist_webgl_project.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +14,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Reply {
+public class Reply extends BaseTimeEntity{
 
     @Id
     @Column(name="reply_id")
@@ -20,8 +23,5 @@ public class Reply {
     @Lob
     private String content;
     private String createdBy;
-    private LocalDateTime regTime;
-
-
 
 }
