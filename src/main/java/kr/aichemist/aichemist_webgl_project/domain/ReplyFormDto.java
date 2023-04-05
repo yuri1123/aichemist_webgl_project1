@@ -4,6 +4,7 @@ import jakarta.persistence.Lob;
 import lombok.Getter;
 import lombok.Setter;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.annotation.CreatedBy;
 
 import java.time.LocalDateTime;
 
@@ -13,11 +14,10 @@ public class ReplyFormDto {
 
 
     private Long id;
+    private String createdBy;
     @Lob
     private String content;
-    private String createdBy;
     private LocalDateTime regTime;
-
     private LocalDateTime modifiedTime;
 
     private static ModelMapper modelMapper = new ModelMapper();

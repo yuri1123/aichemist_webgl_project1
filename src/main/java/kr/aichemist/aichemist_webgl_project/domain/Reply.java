@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
 
 import java.time.LocalDateTime;
 
@@ -22,6 +20,7 @@ public class Reply extends BaseTimeEntity{
     private Long id;
     @Lob
     private String content;
+    @CreatedBy
     private String createdBy;
 
 }
