@@ -158,8 +158,8 @@ p {
 
 .main-button a {
   font-size: 14px;
-  color: #fff;
-  background-color: #e75e8d;
+  color: transparent;
+  background-color: transparent;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -172,8 +172,8 @@ p {
 }
 
 .main-button a:hover {
-  background-color: #fff;
-  color: #e75e8d;
+  background-color: transparent;
+  color: transparent;
 }
 
 .main-border-button a {
@@ -509,7 +509,7 @@ Header Style
   text-indent: -9999em;
   z-index: 99;
   right: 20px;
-  display: none;
+  display: block;
 }
 
 .background-header .main-nav .menu-trigger {
@@ -619,7 +619,7 @@ Header Style
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #fff;
+  color: #27292a;
 }
 
 @media (max-width: 1200px) {
@@ -669,7 +669,7 @@ Header Style
     width: 100%;
   }
   .header-area {
-    background-color: #f7f7f7;
+    background-color: #27292a;
     padding: 0px 15px;
     height: 80px;
     box-shadow: none;
@@ -773,7 +773,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../aichemist/Coverimage.png);
   background-position: center center;
   background-size: cover;
   min-height: 380px;
