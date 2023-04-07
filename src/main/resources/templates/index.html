@@ -152,6 +152,7 @@
 
                                 var container = document.querySelector("#unity-container");
                                 var canvas = document.querySelector("#unity-canvas");
+                              canvas.focus(); // 캔버스에 대한 포커스 설정
                                 var loadingBar = document.querySelector("#unity-loading-bar");
                                 var progressBarFull = document.querySelector("#unity-progress-bar-full");
                                 var fullscreenButton = document.querySelector("#unity-fullscreen-button");
@@ -188,8 +189,8 @@
                                   productVersion: "0.1",
                                   showBanner: unityShowBanner,
                                 };
+                                config.captureAllKeyboardInput = false;
                                 config.matchWebGLToCanvasSize = true;
-
 
                                 if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
                                   // Mobile device style: fill the whole browser client area with the game canvas:
@@ -214,7 +215,8 @@
                                 script.onload = () => {
                                   createUnityInstance(canvas, config, (progress) => {
                                     progressBarFull.style.width = 100 * progress + "%";
-                                  }).then((unityInstance) => {
+                                  }, { enableRetinaDisplay: true }).
+                                  then((unityInstance) => {
                                     loadingBar.style.display = "none";
                                     fullscreenButton.onclick = () => {
                                       unityInstance.SetFullscreen(1);
@@ -223,7 +225,7 @@
                                     alert(message);
                                   });
                                 };
-
+                              document.body.captureAllKeyboardInput = false;
                                 document.body.appendChild(script);
                                 // });
                             </script>
@@ -260,12 +262,16 @@
                       <img src="assets/aichemist/contents3.png" alt="" style="border-radius: 23px; margin-bottom: 30px;">
                     </div>
                     <div class="col-lg-12">
-                      <p>안녕하세요 아이케미스트는 AI와 chemist가 합쳐져 만들어졌습니다. 인공지능/메타버스를 이용하여 세상을 변화시킵니다.
-                        안녕하세요 아이케미스트는 AI와 chemist가 합쳐져 만들어졌습니다. 인공지능/메타버스를 이용하여 세상을 변화시킵니다.
-                        안녕하세요 아이케미스트는 AI와 chemist가 합쳐져 만들어졌습니다. 인공지능/메타버스를 이용하여 세상을 변화시킵니다.
-                        안녕하세요 아이케미스트는 AI와 chemist가 합쳐져 만들어졌습니다. 인공지능/메타버스를 이용하여 세상을 변화시킵니다.
-                        안녕하세요 아이케미스트는 AI와 chemist가 합쳐져 만들어졌습니다. 인공지능/메타버스를 이용하여 세상을 변화시킵니다.
-                        안녕하세요 아이케미스트는 AI와 chemist가 합쳐져 만들어졌습니다. 인공지능/메타버스를 이용하여 세상을 변화시킵니다.</p>
+                      <p>간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                        간호학과 산부인과 VR 체험 페이지입니다.
+                      </p>
                     </div>
                   </div>
                 </div>
