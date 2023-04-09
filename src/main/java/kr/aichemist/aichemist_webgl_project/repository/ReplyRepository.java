@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ReplyRepository extends JpaRepository<Reply, Long> {
 
-    @Query("select r from Reply r")
+    @Query("select r from Reply r order by r.regTime desc")
     List<Reply> selectAll();
 
 

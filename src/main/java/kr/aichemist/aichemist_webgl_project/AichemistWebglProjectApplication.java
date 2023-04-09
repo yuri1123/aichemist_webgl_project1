@@ -14,6 +14,7 @@ public class AichemistWebglProjectApplication extends SpringBootServletInitializ
     }
 
     public static void main(String[] args) {
+
         SpringApplication.run(AichemistWebglProjectApplication.class, args);
     }
 

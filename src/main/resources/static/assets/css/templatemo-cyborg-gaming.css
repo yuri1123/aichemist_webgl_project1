@@ -87,11 +87,11 @@ html, body {
 }
 
 a {
-	color: #CCC;
+  color: #CCC;
   text-decoration: none !important;
 }
 a:hover {
-	color: #F99;
+  color: #F99;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -152,8 +152,8 @@ p {
 }
 
 .templatemo-item {
-	max-width: 80px; 
-	border-radius: 23px;
+  max-width: 80px;
+  border-radius: 23px;
 }
 
 .main-button a {
@@ -260,29 +260,29 @@ Pre-loader Style
 
 @-webkit-keyframes dot {
   50% {
-      -webkit-transform: translateX(96px);
-      transform: translateX(96px);
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
   }
 }
 
 @keyframes dot {
   50% {
-      -webkit-transform: translateX(96px);
-      transform: translateX(96px);
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
   }
 }
 
 @-webkit-keyframes dots {
   50% {
-      -webkit-transform: translateX(-31px);
-      transform: translateX(-31px);
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
   }
 }
 
 @keyframes dots {
   50% {
-      -webkit-transform: translateX(-31px);
-      transform: translateX(-31px);
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
   }
 }
 
@@ -335,7 +335,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #fff !important;
+  background-color: #27292a !important;
   height: 70px!important;
   position: fixed!important;
   top: 0!important;
@@ -1188,7 +1188,7 @@ Live Stream Style
 }
 
 .live-stream .thumb img {
-  border-radius: 23px; 
+  border-radius: 23px;
 }
 
 .live-stream .thumb:hover .hover-effect {
@@ -1202,7 +1202,7 @@ Live Stream Style
   transition: all .4s;
 }
 
-.live-stream .hover-effect .live a { 
+.live-stream .hover-effect .live a {
   position: absolute;
   background-color: rgba(236, 96, 144, 0.9);
   padding: 5px 10px;
@@ -1377,7 +1377,7 @@ Game Details Style
 
 .game-details .content .right-info ul li:first-child i {
   color: yellow;
-} 
+}
 
 .game-details .content .right-info ul li i {
   color: #ec6090;
@@ -1390,7 +1390,7 @@ Game Details Style
 .game-details .main-border-button a {
   text-align: center;
   width: 100%;
-} 
+}
 
 /* 
 ---------------------------------------------
@@ -1598,17 +1598,17 @@ Profile Style
 
 .clips .item .thumb a {
   position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-23px, -23px);
-    width: 46px;
-    height: 46px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    line-height: 46px;
-    color: #ec6090;
+  left: 50%;
+  top: 50%;
+  transform: translate(-23px, -23px);
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 46px;
+  color: #ec6090;
 }
 
 .clips .item h4 {
@@ -1692,7 +1692,7 @@ body {
 
 @media (max-width: 992px) {
   .background-header {
-  display: inline-block;
+    display: inline-block;
   }
   .header-area .main-nav #search {
     display: none;
